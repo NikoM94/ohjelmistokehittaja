@@ -6,7 +6,7 @@ class Program
     {
         // VaihdaPaikkaaJos();
         // EtsiSuurinKolmesta();
-        TulostaLukuSanana();
+        // TulostaLukuSanana();
         // SuurinViidesta();
         // KysyKayttajaltaMita();
     }
@@ -136,14 +136,7 @@ private static void TulostaLukuSanana()
         int a = int.Parse(Console.ReadLine());
         Console.WriteLine("Anna luku 2: ");
         int b = int.Parse(Console.ReadLine());
-        if (a > b)
-        {
-            Console.WriteLine($"Suurempi: {a}, pienempi: {b}");
-        }
-        else
-        {
-            Console.WriteLine($"Suurempi: {b}, pienempi: {a}");
-        }
+        Console.WriteLine(a > b ? $"Suurempi: {a}, pienempi: {b}" : $"Suurempi: {b}, pienempi: {a}");
     }
 
     private static void EtsiSuurinKolmesta()
