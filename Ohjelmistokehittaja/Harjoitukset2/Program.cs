@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        VaihdaPaikkaaJos();
-        EtsiSuurinKolmesta();
+        // VaihdaPaikkaaJos();
+        // EtsiSuurinKolmesta();
         TulostaLukuSanana();
-        SuurinViidesta();
-        KysyKayttajaltaMita();
+        // SuurinViidesta();
+        // KysyKayttajaltaMita();
     }
 
     private static void KysyKayttajaltaMita()
@@ -27,7 +27,7 @@ class Program
         }
         
         Console.WriteLine("Anna syötettävä arvo: ");
-        string input = Console.ReadLine();
+        string? input = Console.ReadLine();
         
         switch (inputType)
         {
@@ -45,9 +45,11 @@ class Program
 
 private static void SuurinViidesta()
     {
+        // sama periaate kuin käyttäjltä lukujen ottamisessa ReadLine()-metodilla
         var randomNumbers = new List<int>();
         Random random = new Random();
 
+        // 5 satunnaista lukua
         for (int i = 0; i < 5; i++)
         {
             // asetettu rajoite 10000 jotta numerot konsolissa ovat helposti luettavissa
@@ -78,52 +80,53 @@ private static void SuurinViidesta()
 private static void TulostaLukuSanana()
     {
         // vaihtoehtoinen tapa hajautustaululla
-        // var intToString =  new Dictionary<int, string>() {
-        //     {0, "Nolla"},
-        //     {1, "Yksi"},
-        //     {2, "Kaksi"},
-        //     {3, "Kolme"},
-        //     {4, "Neljä"},
-        //     {5, "Viisi"},
-        //     {6, "Kuusi"},
-        //     {7, "Seitsemän"},
-        //     {8, "Kahdeksan"},
-        //     {9, "Yhdeksän"}
-        // };
+        var intToString =  new Dictionary<int, string>() {
+            {0, "Nolla"},
+            {1, "Yksi"},
+            {2, "Kaksi"},
+            {3, "Kolme"},
+            {4, "Neljä"},
+            {5, "Viisi"},
+            {6, "Kuusi"},
+            {7, "Seitsemän"},
+            {8, "Kahdeksan"},
+            {9, "Yhdeksän"}
+        };
         Console.WriteLine("Anna luku 0-9 väliltä: ");
         int a = int.Parse(Console.ReadLine());
-        // Console.WriteLine(intToString.GetValueOrDefault(a));
+        Console.WriteLine($"Hajautustaululla: {intToString.GetValueOrDefault(a)}");
+        Console.Write("Switch-tavalla: ");
         switch (a)
         {
             case 0:
-                Console.WriteLine("Nolla");
+                Console.Write("Nolla");
                 break;
             case 1:
-                Console.WriteLine("Yksi");
+                Console.Write("Yksi");
                 break;
             case 2:
-                Console.WriteLine("Kaksi");
+                Console.Write("Kaksi");
                 break;
             case 3:
-                Console.WriteLine("Kolme");
+                Console.Write("Kolme");
                 break;
             case 4:
-                Console.WriteLine("Neljä");
+                Console.Write("Neljä");
                 break;
             case 5:
-                Console.WriteLine("Viisi");
+                Console.Write("Viisi");
                 break;
             case 6:
-                Console.WriteLine("Kuusi");
+                Console.Write("Kuusi");
                 break;
             case 7:
-                Console.WriteLine("Seitsemän");
+                Console.Write("Seitsemän");
                 break;
             case 8:
-                Console.WriteLine("Kahdeksan");
+                Console.Write("Kahdeksan");
                 break;
             case 9:
-                Console.WriteLine("Yhdeksän");
+                Console.Write("Yhdeksän");
                 break;
         }
 }
