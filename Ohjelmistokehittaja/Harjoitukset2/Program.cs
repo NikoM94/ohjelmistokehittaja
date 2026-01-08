@@ -45,6 +45,9 @@ class Program
 
         if (numberAsString.Length == 2)
         {
+            string first = intToString.GetValueOrDefault(numberAsString[0] - 48);
+            string second = intToString.GetValueOrDefault(numberAsString[1] - 48);
+                
             if (number == 10)
             {
                 return "Kymmenen";
@@ -52,45 +55,48 @@ class Program
 
             if (number >= 11 && number <= 19)
             {
-                return $"{intToString.GetValueOrDefault(numberAsString[1] - 48)}toista";
+                return $"{second}toista";
             }
 
             if (numberAsString[1] == '0')
             {
-                return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}kymmentä";
+                return $"{first}kymmentä";
             }
             
-            return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}kymmentä {intToString.GetValueOrDefault(numberAsString[1] - 48)}";
+            return $"{first}kymmentä {second}";
         }
 
         if (numberAsString.Length == 3)
         {
+            string first = intToString.GetValueOrDefault(numberAsString[0] - 48);
+            string second = intToString.GetValueOrDefault(numberAsString[1] - 48);
+            string third = intToString.GetValueOrDefault(numberAsString[2] - 48);
             if (numberAsString[1] == '0' && numberAsString[2] == '0')
             {
-                return intToString.GetValueOrDefault(numberAsString[0] - 48) + "sataa";
+                return first + "sataa";
             }
 
             if (numberAsString[0] == '1' && numberAsString[1] == '0')
             {
-                return  $"Sata{intToString.GetValueOrDefault(numberAsString[0] - 48).ToLower()}";
+                return  $"Sata{first.ToLower()}";
             }
 
             if (numberAsString[1] == '0')
             {
-                return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}sataa {intToString.GetValueOrDefault(numberAsString[2] - 48).ToLower()}";
+                return $"{first}sataa {third.ToLower()}";
             }
             
             var builder = new StringBuilder();
 
             if (numberAsString[1] - 48 == 1)
             {
-                builder.Append(intToString.GetValueOrDefault(numberAsString[2] - 48) + "toista");
+                builder.Append(third + "toista");
                 return builder.ToString();
             }
             
-            builder.Append(intToString.GetValueOrDefault(numberAsString[0] - 48) + "sataa");
-            builder.Append(intToString.GetValueOrDefault(numberAsString[1] - 48).ToLower() + "kymmentä");
-            builder.Append(intToString.GetValueOrDefault(numberAsString[2] - 48).ToLower());
+            builder.Append(first + "sataa");
+            builder.Append(second.ToLower() + "kymmentä");
+            builder.Append(third.ToLower());
             
             return builder.ToString();
         }
