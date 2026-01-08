@@ -1,4 +1,6 @@
-﻿namespace Harjoitukset2;
+﻿using System.Text;
+
+namespace Harjoitukset2;
 
 class Program
 {
@@ -9,8 +11,115 @@ class Program
         // TulostaLukuSanana();
         // SuurinViidesta();
         // KysyKayttajaltaMita();
+        // KasvataBonus(0);
+        // KasvataBonus(0);
+        // KasvataBonus(2);
+        // KasvataBonus(5);
+        // KasvataBonus(8);
+        Console.WriteLine(NumerotSanoiksi(801));
     }
 
+    private static string NumerotSanoiksi(int number)
+    {
+        var intToString = new Dictionary<int, string>()
+        {
+            { 0, "Nolla" },
+            { 1, "Yksi" },
+            { 2, "Kaksi" },
+            { 3, "Kolme" },
+            { 4, "Neljä" },
+            { 5, "Viisi" },
+            { 6, "Kuusi" },
+            { 7, "Seitsemän" },
+            { 8, "Kahdeksan" },
+            { 9, "Yhdeksän" }
+        };
+        
+
+        if (number >= 0 && number <= 9)
+        {
+            return intToString.GetValueOrDefault(number);
+        }
+
+        var numberAsString = number.ToString();
+
+        if (numberAsString.Length == 2)
+        {
+            if (number == 10)
+            {
+                return "Kymmenen";
+            }
+
+            if (number >= 11 && number <= 19)
+            {
+                return $"{intToString.GetValueOrDefault(numberAsString[1] - 48)}toista";
+            }
+
+            if (numberAsString[1] == '0')
+            {
+                return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}kymmentä";
+            }
+            
+            return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}kymmentä {intToString.GetValueOrDefault(numberAsString[1] - 48)}";
+        }
+
+        if (numberAsString.Length == 3)
+        {
+            if (numberAsString[1] == '0' && numberAsString[2] == '0')
+            {
+                return intToString.GetValueOrDefault(numberAsString[0] - 48) + "sataa";
+            }
+
+            if (numberAsString[0] == '1' && numberAsString[1] == '0')
+            {
+                return  $"Sata{intToString.GetValueOrDefault(numberAsString[0] - 48).ToLower()}";
+            }
+
+            if (numberAsString[1] == '0')
+            {
+                return $"{intToString.GetValueOrDefault(numberAsString[0] - 48)}sataa {intToString.GetValueOrDefault(numberAsString[2] - 48).ToLower()}";
+            }
+            
+            var builder = new StringBuilder();
+
+            if (numberAsString[1] - 48 == 1)
+            {
+                builder.Append(intToString.GetValueOrDefault(numberAsString[2] - 48) + "toista");
+                return builder.ToString();
+            }
+            
+            builder.Append(intToString.GetValueOrDefault(numberAsString[0] - 48) + "sataa");
+            builder.Append(intToString.GetValueOrDefault(numberAsString[1] - 48).ToLower() + "kymmentä");
+            builder.Append(intToString.GetValueOrDefault(numberAsString[2] - 48).ToLower());
+            
+            return builder.ToString();
+        }
+
+        return "liian suuri tai pieni numero";
+    }
+    private static void KasvataBonus(int existingPoints)
+    {
+        if (existingPoints <= 0 || existingPoints > 9)
+        {
+            Console.WriteLine($"Virhe, liian alhainen pistemäärä: {existingPoints}");
+            return;
+        }
+        
+        if (existingPoints <= 3 && existingPoints >= 1)
+        {
+            Console.WriteLine($"Bonuspisteet: {existingPoints * 10}");
+        }
+        
+        if (existingPoints <= 6 && existingPoints >= 4)
+        {
+            Console.WriteLine($"Bonuspisteet: {existingPoints * 100}");
+        }
+        
+        if (existingPoints <= 9 && existingPoints >= 7)
+        {
+            Console.WriteLine($"Bonuspisteet: {existingPoints * 1000}");
+        }
+    }
     private static void KysyKayttajaltaMita()
     {
         string? inputType;
