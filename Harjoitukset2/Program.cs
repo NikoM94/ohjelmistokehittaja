@@ -73,6 +73,10 @@ class Program
             string third = intToString.GetValueOrDefault(numberAsString[2] - 48);
             if (numberAsString[1] == '0' && numberAsString[2] == '0')
             {
+                if (numberAsString[0] == '1')
+                {
+                    return "Sata";
+                }
                 return first + "sataa";
             }
 
