@@ -15,7 +15,105 @@ class Program
         // Console.WriteLine(ToFahrenheitWithInput());
         // Console.WriteLine(PerformOperationsWithInput());
         // Console.WriteLine(ModulusWithInput());
-        KertoTaulu();
+        // KertoTaulu();
+        // AskAge();
+        // PrintNTimes(13);
+        // SwapHeadAndTail();
+        // Console.WriteLine(CheckNegativeOrPositive());
+        // FindLongestString();
+        // PrintOddNumbers();
+        PrintDivisibleByThree();
+    }
+    
+    static void PrintDivisibleByThree()
+    {
+        for (int i = 1; i < 100; i++)
+        {
+            if (i % 3 == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+    static void PrintOddNumbers()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            if (i % 2 != 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+    private static void FindLongestString()
+    {
+        Console.Write("Anna lause: ");
+        string[] words =  Console.ReadLine().Split(" ");
+        string maxLength = "";
+
+        foreach (string word in words)
+        {
+            if (word.Length > maxLength.Length)
+            {
+                maxLength = word;
+            }
+        }
+
+        Console.WriteLine(maxLength);
+    }
+
+private static string CheckNegativeOrPositive()
+    {
+        Console.Write("Anna luku 1: ");
+        int a =  int.Parse(Console.ReadLine());
+        Console.Write("Anna luku 2: ");
+        int b =  int.Parse(Console.ReadLine());
+
+        if (a > 0 && b > 0)
+        {
+            return "Molemmat ovat positiivisia";
+        }
+        
+        if (a < 0 && b < 0)
+        {
+            return "Molemmt ovat negatiivisia";
+        }
+
+        return "Toinen on positiivinen ja toinen negatiivinen";
+    }
+
+    static void SwapHeadAndTail()
+    {
+        Console.Write("Anna sana: ");
+        string? word =  Console.ReadLine();
+        string swapped = word[^1] + word.Substring(1, word.Length - 2) + word[0];
+        Console.WriteLine(swapped);
+    }
+
+    static void PrintNTimes(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                Console.Write($"{n} ");
+            }
+            Console.WriteLine("");
+            for (int j = 0; j < n; j++)
+            {
+                Console.Write($"{n}");
+            }
+            Console.WriteLine("");
+        }
+    }
+
+static void AskAge()
+    {
+        Console.Write("Anna ikäsi: ");
+        int age = int.Parse(Console.ReadLine());
+        Console.WriteLine($"{age} - näytät ikäistäsi nuoremmalta");
     }
 
     static void KertoTaulu()
