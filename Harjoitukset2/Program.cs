@@ -248,7 +248,8 @@ private static void TulostaLukuSanana()
                 Console.Write("Yhdeksän");
                 break;
         }
-}
+
+    }
     private static void VaihdaPaikkaaJos()
     {
         Console.WriteLine("Anna luku 1: ");
