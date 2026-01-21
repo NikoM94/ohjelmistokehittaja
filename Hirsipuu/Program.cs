@@ -1,8 +1,7 @@
-﻿using System.Runtime.InteropServices;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ohjelmistokehittaja.Hirsipuu;
+namespace Hirsipuu;
 
 class Program
 {
@@ -27,57 +26,64 @@ class Program
     public static void Run()
     {
         string word = GetWord();
+
         Console.WriteLine(word);
         Console.WriteLine("Game started\nGuess a single letter or the entire word, ctrl+c to exit");
+
         var sb = new StringBuilder();
-        int guesses = 1;
+        int guesses = 0;
+
         for (int i = 0; i < word.Length; i++)
         {
             sb.Append('_');
         }
+
         string gameString = sb.ToString();
         while (true)
         {
             Console.Write("Enter your guess>");
             string userGuess = Console.ReadLine();
+            Console.WriteLine();
+
             if (ValidateSingleLetter(userGuess))
             {
-                guesses++;
                 gameString = CheckSingleLetter(gameString, word, userGuess);
-                Console.WriteLine(gameString);
-                PrintGraphic(guesses);
-                Console.WriteLine($"Guesses left: {8 - guesses}");
             }
             else
             {
-                guesses++;
-                gameString = CheckEntireWord(userGuess, word);
-                PrintGraphic(guesses);
-                Console.WriteLine($"You won with {8 - guesses} guesses left gg");
-                break;
-
+                gameString = CheckEntireWord(gameString, userGuess, word);
             }
-            if (guesses == 8)
+
+            if (CheckWin(gameString, word))
+            {
+                Console.WriteLine(gameString);
+                PrintGraphic(guesses);
+                Console.WriteLine($"You won with {9 - guesses - 1} guesses left gg");
+                break;
+            }
+
+            guesses++;
+            if (guesses == 9)
             {
                 Console.WriteLine("You lost loooooool moron");
+                Console.WriteLine($"The correct word was: {word}");
                 break;
             }
-            if (gameString == word)
-            {
-                Console.WriteLine($"You won with {8 - guesses} guesses left gg");
-                break;
-            }
+
+            Console.WriteLine(gameString);
+            PrintGraphic(guesses);
+            Console.WriteLine($"Guesses left: {9 - guesses}");
         }
     }
 
-    private static string CheckEntireWord(string userGuess, string word)
+    private static bool CheckWin(string gameString, string word)
     {
-        if (userGuess == word)
-        {
-            return word;
-        }
-        return userGuess;
+        return gameString == word;
+    }
 
+    private static string CheckEntireWord(string gameString, string userGuess, string word)
+    {
+        return userGuess == word ? word : gameString;
     }
 
     private static string CheckSingleLetter(string gameString, string word, string userGuess)

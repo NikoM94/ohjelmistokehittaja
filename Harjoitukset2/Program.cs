@@ -34,7 +34,7 @@ class Program
             { 8, "Kahdeksan" },
             { 9, "Yhdeksän" }
         };
-        
+
 
         if (number >= 0 && number <= 9)
         {
@@ -47,7 +47,7 @@ class Program
         {
             string first = intToString.GetValueOrDefault(numberAsString[0] - 48);
             string second = intToString.GetValueOrDefault(numberAsString[1] - 48);
-                
+
             if (number == 10)
             {
                 return "Kymmenen";
@@ -62,8 +62,8 @@ class Program
             {
                 return $"{first}kymmentä";
             }
-            
-            return $"{first}kymmentä {second}";
+
+            return $"{first}kymmentä {second.ToLower()}";
         }
 
         if (numberAsString.Length == 3)
@@ -82,14 +82,14 @@ class Program
 
             if (numberAsString[0] == '1' && numberAsString[1] == '0')
             {
-                return  $"Sata{first.ToLower()}";
+                return $"Sata{first.ToLower()}";
             }
 
             if (numberAsString[1] == '0')
             {
                 return $"{first}sataa {third.ToLower()}";
             }
-            
+
             var builder = new StringBuilder();
 
             if (numberAsString[1] - 48 == 1)
@@ -97,11 +97,11 @@ class Program
                 builder.Append(third + "toista");
                 return builder.ToString();
             }
-            
+
             builder.Append(first + "sataa");
             builder.Append(second.ToLower() + "kymmentä");
             builder.Append(third.ToLower());
-            
+
             return builder.ToString();
         }
 
@@ -114,17 +114,17 @@ class Program
             Console.WriteLine($"Virhe, liian alhainen pistemäärä: {existingPoints}");
             return;
         }
-        
+
         if (existingPoints <= 3 && existingPoints >= 1)
         {
             Console.WriteLine($"Bonuspisteet: {existingPoints * 10}");
         }
-        
+
         if (existingPoints <= 6 && existingPoints >= 4)
         {
             Console.WriteLine($"Bonuspisteet: {existingPoints * 100}");
         }
-        
+
         if (existingPoints <= 9 && existingPoints >= 7)
         {
             Console.WriteLine($"Bonuspisteet: {existingPoints * 1000}");
@@ -133,7 +133,7 @@ class Program
     private static void KysyKayttajaltaMita()
     {
         string? inputType;
-        
+
         while (true)
         {
             Console.WriteLine("Mitä haluat syöttää? Vaihtehdot: double, string, int");
@@ -144,10 +144,10 @@ class Program
             }
             Console.WriteLine("Väärä syöttötyyppi.");
         }
-        
+
         Console.WriteLine("Anna syötettävä arvo: ");
         string? input = Console.ReadLine();
-        
+
         switch (inputType)
         {
             case "double":
@@ -162,7 +162,7 @@ class Program
         }
     }
 
-private static void SuurinViidesta()
+    private static void SuurinViidesta()
     {
         // sama periaate kuin käyttäjltä lukujen ottamisessa ReadLine()-metodilla
         var randomNumbers = new List<int>();
@@ -172,8 +172,8 @@ private static void SuurinViidesta()
         for (int i = 0; i < 5; i++)
         {
             // asetettu rajoite 10000 jotta numerot konsolissa ovat helposti luettavissa
-            int randomNumber = random.Next(10000); 
-            randomNumbers.Add(randomNumber); 
+            int randomNumber = random.Next(10000);
+            randomNumbers.Add(randomNumber);
         }
 
         Console.WriteLine("Viisi satunnaista numeroa:");
@@ -184,7 +184,7 @@ private static void SuurinViidesta()
         }
 
         int max = 0;
-        
+
         foreach (int number in randomNumbers)
         {
             if (number > max)
@@ -196,10 +196,10 @@ private static void SuurinViidesta()
         Console.WriteLine($"\nSuurin numero: {max}");
     }
 
-private static void TulostaLukuSanana()
+    private static void TulostaLukuSanana()
     {
         // vaihtoehtoinen tapa hajautustaululla
-        var intToString =  new Dictionary<int, string>() {
+        var intToString = new Dictionary<int, string>() {
             {0, "Nolla"},
             {1, "Yksi"},
             {2, "Kaksi"},
