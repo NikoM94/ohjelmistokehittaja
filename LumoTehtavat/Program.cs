@@ -6,6 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        // TAULUKOT
+
         // PrintToUpper();
         // PrintShoppingList();
         // PrintFiveNames();
@@ -25,7 +27,115 @@ class Program
         // PrintMultiplyElementsNTimes();
         // PrintUnique();
         // PrintRemoveSmallerThan();
-        PrintSwapHeadAndTail();
+        // PrintSwapHeadAndTail();
+
+        // SILMUKAT
+
+        // PrintInterestCalculation();
+        // PrintFactorial();
+        // PrintFindFirst();
+        // PrintReverseString();
+        // PrintMaximum();
+        // PrintAverage();
+        // PrintToUpperCase();
+        // PrintFindSeventhOdd();
+        // PrintFindSecondLargest();
+        // Silmukat.FizzBuzz();
+        // PrintFib();
+        // PrintEvenFib();
+        // PrintPalindrome();
+        // PrintOddFib();
+        // PrintGCF();
+        // Silmukat.CSV();
+    }
+
+    private static void PrintGCF()
+    {
+        int a = 12;
+        int b = 18;
+        Console.WriteLine($"Greatest common factor of {a} and {b} is {Silmukat.GCF(a, b)}");
+    }
+
+    private static void PrintOddFib()
+    {
+        int nthFib = 10;
+        Console.WriteLine($"{nthFib}th odd Fibonacci number: {Silmukat.OddFib(nthFib)}");
+    }
+
+    private static void PrintPalindrome()
+    {
+        string p = "saippuakauppias";
+        Console.WriteLine(Silmukat.Palindrome(p) ? $"String {p} is a palindrome" : $"String {p} is not a palindrome");
+    }
+
+    private static void PrintEvenFib()
+    {
+        int nthFib = 10;
+        Console.WriteLine($"{nthFib}th even Fibonacci number: {Silmukat.EvenFib(nthFib)}");
+    }
+
+    private static void PrintFib()
+    {
+        int nthFib = 10;
+        Console.WriteLine($"{nthFib}th Fibonacci number: {Silmukat.Fib(nthFib)}");
+    }
+
+    private static void PrintFindSecondLargest()
+    {
+        int[] ints = [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3];
+        Console.WriteLine($"Second largest in {ToString(ints)}: {Silmukat.FindSecondLargest(ints)}");
+    }
+
+    private static void PrintFindSeventhOdd()
+    {
+        int[] ints = [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3];
+        Console.WriteLine($"The seventh odd numbers in {ToString(ints)} is {Silmukat.FindSeventhOdd(ints)}");
+    }
+
+    private static void PrintToUpperCase()
+    {
+        char[] chars = ['a', 'b', 'c', 'd', 'e', 'f'];
+        Console.WriteLine($"{ToString(chars)} in upper case: {ToString(Silmukat.ToUpperCase(chars))}");
+    }
+
+    private static void PrintAverage()
+    {
+        int[] ints = [6, 7, 2, 4, 3, 8, 1];
+        Console.WriteLine($"Average of {ToString(ints)}: {Silmukat.Average(ints)}");
+    }
+
+    private static void PrintMaximum()
+    {
+        int[] ints = [6, 7, 2, 4, 3, 8, 1];
+        Console.WriteLine($"Maximum value of {ToString(ints)}: {Silmukat.Maximum(ints)}");
+    }
+
+    private static void PrintReverseString()
+    {
+        string s = "Horse";
+        Console.WriteLine($"{s} in reverse: {Silmukat.ReverseString(s)}");
+    }
+
+    private static void PrintFindFirst()
+    {
+        int[] ints = [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3];
+        int toFind = 3;
+        Console.WriteLine($"Find {toFind} in {ToString(ints)}: {Silmukat.FindFirst(ints, toFind)}");
+    }
+
+    private static void PrintFactorial()
+    {
+        int factorial = 4;
+        Console.WriteLine($"The factorial for number {factorial} is {Silmukat.Factorial(factorial)}");
+    }
+
+    private static void PrintInterestCalculation()
+    {
+        double price = 5000;
+        double interest = 2;
+        int months = 24;
+        double payment = Silmukat.CalculateInterest(price, interest, months);
+        Console.WriteLine($"Total payment for price: {price} interest: {2}%, time: {months} is {payment}");
     }
 
     private static void PrintSwapHeadAndTail()
@@ -174,6 +284,18 @@ class Program
     }
 
     private static string ToString(int[] toPrint)
+    {
+        var builder = new StringBuilder();
+        builder.Append('[');
+        foreach (var item in toPrint)
+        {
+            builder.Append($"{item}, ");
+        }
+        return $"{builder.ToString().Trim(' ').Trim(',')}]";
+
+    }
+
+    private static string ToString(char[] toPrint)
     {
         var builder = new StringBuilder();
         builder.Append('[');
