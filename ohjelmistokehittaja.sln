@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondProject", "SecondProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolmasTehtava", "KolmasTehtava\KolmasTehtava.csproj", "{05E810FA-A4D3-42EB-9003-12BD11EB61C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ikälaskuri", "Ikälaskuri\Ikälaskuri.csproj", "{24479C98-C5EB-464D-AEA3-51B0293F701A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{05E810FA-A4D3-42EB-9003-12BD11EB61C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E810FA-A4D3-42EB-9003-12BD11EB61C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E810FA-A4D3-42EB-9003-12BD11EB61C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24479C98-C5EB-464D-AEA3-51B0293F701A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24479C98-C5EB-464D-AEA3-51B0293F701A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24479C98-C5EB-464D-AEA3-51B0293F701A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24479C98-C5EB-464D-AEA3-51B0293F701A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
