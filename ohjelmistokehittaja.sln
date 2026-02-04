@@ -1,17 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerot", "Numerot\Numerot.csproj", "{629C0C29-A894-4BBD-8D3C-0BB679CC02F4}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Numerot", "Numerot\Numerot.csproj", "{629C0C29-A894-4BBD-8D3C-0BB679CC02F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitukset2", "Harjoitukset2\Harjoitukset2.csproj", "{9B79B4BC-277C-4015-AC31-FB7B0BF8A1FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitukset2", "Harjoitukset2\Harjoitukset2.csproj", "{9B79B4BC-277C-4015-AC31-FB7B0BF8A1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitukset3", "Harjoitukset3\Harjoitukset3.csproj", "{8C1B09BB-5F0C-4A0B-B27F-8ED7B770A9AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harjoitukset3", "Harjoitukset3\Harjoitukset3.csproj", "{8C1B09BB-5F0C-4A0B-B27F-8ED7B770A9AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LumoTehtavat", "LumoTehtavat\LumoTehtavat.csproj", "{7EE57BCF-2EC3-4A13-8BAC-F57CF9878464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LumoTehtavat", "LumoTehtavat\LumoTehtavat.csproj", "{7EE57BCF-2EC3-4A13-8BAC-F57CF9878464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mastermind", "Mastermind\Mastermind.csproj", "{2264B0BE-99A3-4EAE-944B-08DE9CAC6DE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mastermind", "Mastermind\Mastermind.csproj", "{2264B0BE-99A3-4EAE-944B-08DE9CAC6DE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hirsipuu", "Hirsipuu\Hirsipuu.csproj", "{F4C83EC2-9A7B-49F0-9A65-E8D0CBC4A500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hirsipuu", "Hirsipuu\Hirsipuu.csproj", "{F4C83EC2-9A7B-49F0-9A65-E8D0CBC4A500}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "First GUI App", "First GUI App\First GUI App.csproj", "{BC4A47D5-02D0-447C-BADA-BADD2C08A705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondProject", "SecondProject\SecondProject.csproj", "{DAEAA732-C56A-4391-8590-1DB7B63ABC26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,5 +49,19 @@ Global
 		{F4C83EC2-9A7B-49F0-9A65-E8D0CBC4A500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C83EC2-9A7B-49F0-9A65-E8D0CBC4A500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C83EC2-9A7B-49F0-9A65-E8D0CBC4A500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4A47D5-02D0-447C-BADA-BADD2C08A705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4A47D5-02D0-447C-BADA-BADD2C08A705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4A47D5-02D0-447C-BADA-BADD2C08A705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4A47D5-02D0-447C-BADA-BADD2C08A705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEAA732-C56A-4391-8590-1DB7B63ABC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEAA732-C56A-4391-8590-1DB7B63ABC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEAA732-C56A-4391-8590-1DB7B63ABC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEAA732-C56A-4391-8590-1DB7B63ABC26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06AE027B-F5E9-4CE4-82A7-621B31CA72FF}
 	EndGlobalSection
 EndGlobal
