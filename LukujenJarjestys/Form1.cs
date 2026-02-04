@@ -28,7 +28,10 @@ namespace LukujenJarjestys
                         .Select(num => num.ToString())
                         .ToArray()
                         .Aggregate((prev, next) => prev + " " + next);
+<<<<<<< HEAD
                     VastausLB.Visible = true;
+=======
+>>>>>>> a7969d383d79029cb43d0cd6fcae661277983340
                 }
                 else
                 {
@@ -36,6 +39,10 @@ namespace LukujenJarjestys
                     UusiLukuTB.Text = "";
                 }
             }
+<<<<<<< HEAD
+=======
+            VastausLB.Visible = true;
+>>>>>>> a7969d383d79029cb43d0cd6fcae661277983340
         }
     }
 }
