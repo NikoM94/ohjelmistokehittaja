@@ -73,7 +73,7 @@
             // TervetuloaLabel
             // 
             this.TervetuloaLabel.AutoSize = true;
-            this.TervetuloaLabel.Location = new System.Drawing.Point(0, 15);
+            this.TervetuloaLabel.Location = new System.Drawing.Point(0, 47);
             this.TervetuloaLabel.Name = "TervetuloaLabel";
             this.TervetuloaLabel.Size = new System.Drawing.Size(572, 76);
             this.TervetuloaLabel.TabIndex = 0;
@@ -87,6 +87,7 @@
             this.VirheLB.Size = new System.Drawing.Size(95, 32);
             this.VirheLB.TabIndex = 5;
             this.VirheLB.Text = "VirheLB";
+            this.VirheLB.Visible = false;
             // 
             // TarkistaTB
             // 

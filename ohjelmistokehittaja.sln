@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukujenJarjestys", "Lukujen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalasananTarkistus", "SalasananTarkistus\SalasananTarkistus.csproj", "{B37D82EC-7884-4EC7-9CE3-92BB19FA0380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autokululaskuri", "Autokululaskuri\Autokululaskuri.csproj", "{717FEAD4-EEB1-4C92-9E50-84130862F1B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{B37D82EC-7884-4EC7-9CE3-92BB19FA0380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B37D82EC-7884-4EC7-9CE3-92BB19FA0380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B37D82EC-7884-4EC7-9CE3-92BB19FA0380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717FEAD4-EEB1-4C92-9E50-84130862F1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717FEAD4-EEB1-4C92-9E50-84130862F1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717FEAD4-EEB1-4C92-9E50-84130862F1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717FEAD4-EEB1-4C92-9E50-84130862F1B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
