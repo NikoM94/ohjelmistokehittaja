@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelsiusFahrenheit", "Celsiu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMILaskuri", "BMILaskuri\BMILaskuri.csproj", "{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nopaanheitto", "Nopaanheitto\Nopaanheitto.csproj", "{95D1FB81-98ED-44EC-83AC-35F0012DB163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kysymykset", "Kysymykset\Kysymykset.csproj", "{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D1FB81-98ED-44EC-83AC-35F0012DB163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D1FB81-98ED-44EC-83AC-35F0012DB163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D1FB81-98ED-44EC-83AC-35F0012DB163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D1FB81-98ED-44EC-83AC-35F0012DB163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
