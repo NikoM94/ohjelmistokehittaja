@@ -31,15 +31,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autokululaskuri", "Autokulu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoomalaisetNumerot", "RoomalaisetNumerot\RoomalaisetNumerot.csproj", "{59213276-ADF9-45AA-8F6F-DE65160A1919}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelsiusFahrenheit", "CelsiusFahrenheit\CelsiusFahrenheit.csproj", "{E4511715-6F7A-418D-9A71-DDC271E4D096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelsiusFahrenheit", "CelsiusFahrenheit\CelsiusFahrenheit.csproj", "{E4511715-6F7A-418D-9A71-DDC271E4D096}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMILaskuri", "BMILaskuri\BMILaskuri.csproj", "{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMILaskuri", "BMILaskuri\BMILaskuri.csproj", "{79CAAA4E-3A42-4DFF-9C27-FF61E553ADAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nopaanheitto", "Nopaanheitto\Nopaanheitto.csproj", "{95D1FB81-98ED-44EC-83AC-35F0012DB163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nopaanheitto", "Nopaanheitto\Nopaanheitto.csproj", "{95D1FB81-98ED-44EC-83AC-35F0012DB163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kysymykset", "Kysymykset\Kysymykset.csproj", "{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kysymykset", "Kysymykset\Kysymykset.csproj", "{DA2CAA87-D818-4A8E-BAB7-6CAECE588BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tietovisa", "Tietovisa\Tietovisa.csproj", "{5E07BA67-B19C-4C4B-872B-64F629A6979B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tietovisa", "Tietovisa\Tietovisa.csproj", "{5E07BA67-B19C-4C4B-872B-64F629A6979B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimilista2", "Nimilista2\Nimilista2.csproj", "{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{5E07BA67-B19C-4C4B-872B-64F629A6979B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E07BA67-B19C-4C4B-872B-64F629A6979B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E07BA67-B19C-4C4B-872B-64F629A6979B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
