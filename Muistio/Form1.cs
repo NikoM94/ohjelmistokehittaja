@@ -2,7 +2,7 @@ namespace Muistio
 {
     public partial class MuistioFM : Form
     {
-        private string filePath;
+        private string filePath = "";
         public MuistioFM()
         {
             InitializeComponent();
@@ -62,7 +62,7 @@ namespace Muistio
 
         private void tallennaNimell‰ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Text Document|*.txt", ValidateNames = true })
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Rich Text Document|*.rtf", ValidateNames = true })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -98,7 +98,12 @@ namespace Muistio
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(Input_RTB.Text, Input_RTB.Font, Brushes.Black, 12, 10);
+            if (e != null)
+            {
+                {
+                    e.Graphics.DrawString(Input_RTB.Text, Input_RTB.Font, Brushes.Black, 12, 10);
+                }
+            }
         }
 
         private void printPreviewDialog1_Load(object sender, EventArgs e)
