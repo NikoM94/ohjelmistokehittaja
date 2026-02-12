@@ -41,13 +41,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kysymykset", "Kysymykset\Ky
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tietovisa", "Tietovisa\Tietovisa.csproj", "{5E07BA67-B19C-4C4B-872B-64F629A6979B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimilista2", "Nimilista2\Nimilista2.csproj", "{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nimilista2", "Nimilista2\Nimilista2.csproj", "{18AEF5F9-80AA-4C34-90BD-5AC35E010FE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paivakirja", "Paivakirja\Paivakirja.csproj", "{B39BDEAA-EBAA-44C4-BA2B-3BF7BC9ADF66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paivakirja", "Paivakirja\Paivakirja.csproj", "{B39BDEAA-EBAA-44C4-BA2B-3BF7BC9ADF66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sekuntikello", "Ajastin\Sekuntikello.csproj", "{AF99F809-BADF-4F12-BA9B-6B560AA6EEFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ajastin", "Ajastin\Ajastin.csproj", "{CC1BF299-4F41-4D76-9103-E851952486A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ajastin", "Ajastin\Ajastin.csproj", "{CC1BF299-4F41-4D76-9103-E851952486A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muistio", "Muistio\Muistio.csproj", "{F0E4147A-EB08-424D-A158-9BB1F2520C58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{CC1BF299-4F41-4D76-9103-E851952486A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC1BF299-4F41-4D76-9103-E851952486A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC1BF299-4F41-4D76-9103-E851952486A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E4147A-EB08-424D-A158-9BB1F2520C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E4147A-EB08-424D-A158-9BB1F2520C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E4147A-EB08-424D-A158-9BB1F2520C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E4147A-EB08-424D-A158-9BB1F2520C58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
