@@ -49,9 +49,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sekuntikello", "Ajastin\Sek
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ajastin", "Ajastin\Ajastin.csproj", "{CC1BF299-4F41-4D76-9103-E851952486A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muistio", "Muistio\Muistio.csproj", "{F0E4147A-EB08-424D-A158-9BB1F2520C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Muistio", "Muistio\Muistio.csproj", "{F0E4147A-EB08-424D-A158-9BB1F2520C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kahvio", "Kahvio\Kahvio.csproj", "{3041DCF6-80BF-4F01-B94C-D956665DE710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kahvio", "Kahvio\Kahvio.csproj", "{3041DCF6-80BF-4F01-B94C-D956665DE710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opiskelijahallinta", "WinFormsApp1\Opiskelijahallinta.csproj", "{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{3041DCF6-80BF-4F01-B94C-D956665DE710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3041DCF6-80BF-4F01-B94C-D956665DE710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3041DCF6-80BF-4F01-B94C-D956665DE710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
