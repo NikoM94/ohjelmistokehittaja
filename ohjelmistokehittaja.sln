@@ -55,7 +55,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kahvio", "Kahvio\Kahvio.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opiskelijahallinta", "WinFormsApp1\Opiskelijahallinta.csproj", "{67A405D3-5CD6-4750-B3F8-C9F180EC22DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OppilaitoksenTiedot", "OppilaitoksenTiedot\OppilaitoksenTiedot.csproj", "{358B83BE-2504-419C-BDBE-D56FBE2A6EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OppilaitoksenTiedot", "OppilaitoksenTiedot\OppilaitoksenTiedot.csproj", "{358B83BE-2504-419C-BDBE-D56FBE2A6EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotelli", "Hotelli\Hotelli.csproj", "{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{358B83BE-2504-419C-BDBE-D56FBE2A6EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{358B83BE-2504-419C-BDBE-D56FBE2A6EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{358B83BE-2504-419C-BDBE-D56FBE2A6EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
