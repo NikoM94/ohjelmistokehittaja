@@ -21,20 +21,19 @@ namespace Hotelli
 
         private void HotelCustomerFM_Load(object sender, EventArgs e)
         {
-            GetAllCustomers();
-            CustomerDG.DataSource = customers;    
+            CustomerDG.DataSource = GetAllCustomers();    
         }
 
-        private void GetAllCustomers()
+        private DataTable GetAllCustomers()
         {
             Connection connection = new Connection();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT firstname, lastname, address, postcode, postalarea FROM customers", connection.GetConnection());
-
+            MySqlCommand command = new MySqlCommand("SELECT customerid, firstname, lastname, address, postcode, postalarea FROM customers", connection.GetConnection());
+            connection.OpenConnection();
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            customers = table;
+            return table;
         }
 
         private void CustomerEmptyFieldsBT_Click(object sender, EventArgs e)
@@ -53,28 +52,43 @@ namespace Hotelli
             string firstName = CustomerFirstNameTB.Text;
             string lastName = CustomerLastNameTB.Text;
             string address = CustomerAddressTB.Text;
-            string postalCode = CustomerPostalCodeTB.Text;
+            string postcode = CustomerPostalCodeTB.Text;
             string postalArea = CustomerPostalAreaTB.Text;
             string userName = CustomerUsernameTB.Text;
             string password = CustomerPasswordTB.Text;
-            ValidFields validFields = InputValidator.ValidateUserRegistration(firstName, lastName, address, postalCode, postalArea, userName, password);
+            ValidFields validFields = InputValidator.ValidateUserRegistration(firstName, lastName, address, postcode, postalArea, userName, password);
             string errorMsg = BuildErrorMessage(validFields);
 
             if (errorMsg.Length > 0)
             {
-                //Show messagebox here with error msg
+                MessageBox.Show($"Fields missing or invalid: {errorMsg}", "Missing or invalid fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             Connection connection = new Connection();
             MySqlCommand command = new MySqlCommand("INSERT INTO customers " +
-                                                    "(firstname, lastname, address, postalcode, postalarea) " +
-                                                    "VALUES (@fn, @ln, @addr, @pscode, @psarea); ", connection.GetConnection());
+                                                    "(firstname, lastname, address, postcode, postalarea, username, password) " +
+                                                    "VALUES (@fn, @ln, @addr, @pscode, @psarea, @usn, @pw); ", connection.GetConnection());
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = firstName;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lastName;
             command.Parameters.Add("@addr", MySqlDbType.VarChar).Value = address;
-            command.Parameters.Add("@pscode", MySqlDbType.VarChar).Value = postalCode;
+            command.Parameters.Add("@pscode", MySqlDbType.VarChar).Value = postcode;
             command.Parameters.Add("@psarea", MySqlDbType.VarChar).Value = postalArea;
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = userName;
+            command.Parameters.Add("@pw", MySqlDbType.VarChar).Value = password;
+
+            connection.OpenConnection();
+
+            if (command.ExecuteNonQuery() != 1)
+            {
+                MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            connection.CloseConnection();
+
+            customers = GetAllCustomers();
+            CustomerDG.DataSource = customers;
         }
         
         private string BuildErrorMessage(ValidFields fields)
@@ -114,6 +128,32 @@ namespace Hotelli
                 return sb.ToString().Trim();
             }
             return "";
+        }
+
+        private void CustomerDeleteBT_Click(object sender, EventArgs e)
+        {
+            if (CustomerDG.CurrentRow == null)
+            {
+                return;
+            }
+
+            var id = CustomerDG.CurrentRow.Cells["customerid"].Value.ToString();
+
+            Connection connection = new Connection();
+            MySqlCommand command = new MySqlCommand("DELETE FROM customers WHERE customerid = @id", connection.GetConnection());
+
+            command.Parameters.AddWithValue("@id", id);
+
+            connection.OpenConnection();
+            if (command.ExecuteNonQuery() != 1)
+            {
+                MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            connection.CloseConnection();
+
+            customers = GetAllCustomers();
+            CustomerDG.DataSource = customers;
         }
     }
 }

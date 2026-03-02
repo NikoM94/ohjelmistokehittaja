@@ -226,6 +226,7 @@
             this.CustomerDeleteBT.TabIndex = 18;
             this.CustomerDeleteBT.Text = "Poista";
             this.CustomerDeleteBT.UseVisualStyleBackColor = true;
+            this.CustomerDeleteBT.Click += new System.EventHandler(this.CustomerDeleteBT_Click);
             // 
             // CustomerEmptyFieldsBT
             // 
@@ -274,6 +275,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "HotelCustomerFM";
             this.Text = "Asiakkaiden hallinta";
+            this.Load += new System.EventHandler(this.HotelCustomerFM_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDG)).EndInit();

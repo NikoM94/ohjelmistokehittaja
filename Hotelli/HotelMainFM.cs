@@ -9,7 +9,9 @@ namespace Hotelli
 
         private void hallitseAsiakkaitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HotelCustomerFM customerFM = new HotelCustomerFM();
+            customerFM.Show();
         }
 
         private void hallitseVarauksiaToolStripMenuItem_Click(object sender, EventArgs e)
