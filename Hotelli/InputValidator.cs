@@ -28,18 +28,56 @@ namespace Hotelli
         private const string UserNameRegex = @"^[a-zA-Z0-9åäöÅÄÖ]{3,25}$";
         private const string PassWordRegex = @"^.{12,25}$";
 
-        public static ValidFields ValidateUserRegistration(string firstName, string lastName, string address, string postcode, string city, string userName, string password)
+        public static ValidFields ValidateUserRegistration(CustomerInfo customer)
         {
             return new ValidFields
             {
-                FirstName = Regex.IsMatch(firstName, NameRegex),
-                LastName = Regex.IsMatch(lastName, NameRegex),
-                Address = Regex.IsMatch(address, AddressRegex),
-                Postcode = Regex.IsMatch(postcode, PostcodeRegex),
-                City = Regex.IsMatch(city, CityRegex),
-                Username = Regex.IsMatch(userName, UserNameRegex),
-                Password = Regex.IsMatch(password, PassWordRegex)
+                FirstName = Regex.IsMatch(customer.FirstName, NameRegex),
+                LastName = Regex.IsMatch(customer.LastName, NameRegex),
+                Address = Regex.IsMatch(customer.Address, AddressRegex),
+                Postcode = Regex.IsMatch(customer.Postcode, PostcodeRegex),
+                City = Regex.IsMatch(customer.City, CityRegex),
+                Username = Regex.IsMatch(customer.Username, UserNameRegex),
+                Password = Regex.IsMatch(customer.Password, PassWordRegex)
             };
+        }
+        public static string BuildErrorMessage(ValidFields fields)
+        {
+            StringBuilder sb = new StringBuilder();
+            if (!fields.FirstName)
+            {
+                sb.Append("invalid first name, ");
+            }
+            if (!fields.LastName)
+            {
+                sb.Append("invalid last name, ");
+            }
+            if (!fields.Address)
+            {
+                sb.Append("invalid address, ");
+            }
+            if (!fields.Postcode)
+            {
+                sb.Append("invalid post code, ");
+            }
+            if (!fields.City)
+            {
+                sb.Append("invalid city, ");
+            }
+            if (!fields.Username)
+            {
+                sb.Append("invalid invalid user name, ");
+            }
+            if (!fields.Password)
+            {
+                sb.Append("invalid password, ");
+            }
+            
+            if (sb.ToString().Length > 0)
+            {
+                return sb.ToString().Trim();
+            }
+            return "";
         }
     }
 }

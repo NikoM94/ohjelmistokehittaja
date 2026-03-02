@@ -207,6 +207,7 @@
             this.CustomerUpdateBT.TabIndex = 16;
             this.CustomerUpdateBT.Text = "Muokkaa";
             this.CustomerUpdateBT.UseVisualStyleBackColor = true;
+            this.CustomerUpdateBT.Click += new System.EventHandler(this.CustomerUpdateBT_Click);
             // 
             // CustomerAddBT
             // 
