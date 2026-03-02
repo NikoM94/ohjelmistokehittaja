@@ -247,6 +247,7 @@
             this.CustomerDG.RowTemplate.Height = 25;
             this.CustomerDG.Size = new System.Drawing.Size(530, 351);
             this.CustomerDG.TabIndex = 20;
+            this.CustomerDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerDG_CellClick);
             // 
             // HotelCustomerFM
             // 

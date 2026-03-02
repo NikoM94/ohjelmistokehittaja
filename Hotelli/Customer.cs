@@ -15,7 +15,7 @@ namespace Hotelli
             Connection connection = new Connection();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT customerid, firstname, lastname, address, postcode, postalarea FROM customers", connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.GetCustomersCommand, connection.GetConnection());
             connection.OpenConnection();
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -25,9 +25,7 @@ namespace Hotelli
         public static bool AddCustomer(CustomerInfo customer)
         {
             Connection connection = new Connection();
-            MySqlCommand command = new MySqlCommand("INSERT INTO customers " +
-                                                    "(firstname, lastname, address, postcode, postalarea, username, password) " +
-                                                    "VALUES (@fn, @ln, @addr, @pscode, @psarea, @usn, @pw); ", connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.AddCustomerCommand, connection.GetConnection());
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = customer.FirstName;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = customer.LastName;
             command.Parameters.Add("@addr", MySqlDbType.VarChar).Value = customer.Address;
@@ -53,7 +51,7 @@ namespace Hotelli
         public static bool DeleteCustomer(string id)
         {
             Connection connection = new Connection();
-            MySqlCommand command = new MySqlCommand("DELETE FROM customers WHERE customerid = @id", connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.DeleteCustomerCommand, connection.GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
 
@@ -73,16 +71,7 @@ namespace Hotelli
         public static bool UpdateCustomer(CustomerInfo customer, string id)
         {
             Connection connection = new Connection();
-            string query = @"UPDATE customers 
-                 SET firstname = @fn, 
-                     lastname = @ln, 
-                     address = @addr, 
-                     postcode = @pc, 
-                     postalarea = @pa, 
-                     username = @user, 
-                     `password` = @pass 
-                 WHERE customerid = @id";
-            MySqlCommand command = new MySqlCommand(query, connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.UpdateCustomerCommand, connection.GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.AddWithValue("@fn", customer.FirstName);

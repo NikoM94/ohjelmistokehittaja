@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 struct CustomerInfo
 {
-    public string Id;
     public string FirstName;
     public string LastName;
     public string Address;
@@ -150,6 +149,16 @@ namespace Hotelli
             }
             customers = Customer.GetCustomers();
             CustomerDG.DataSource = customers;
+        }
+
+        private void CustomerDG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var customerValues = CustomerDG.Rows[e.RowIndex].Cells;
+            CustomerFirstNameTB.Text = customerValues["firstname"].Value.ToString();
+            CustomerLastNameTB.Text = customerValues["lastname"].Value.ToString();
+            CustomerAddressTB.Text = customerValues["address"].Value.ToString();
+            CustomerPostalCodeTB.Text = customerValues["postcode"].Value.ToString();
+            CustomerPostalAreaTB.Text = customerValues["postalarea"].Value.ToString();
         }
     }
 }

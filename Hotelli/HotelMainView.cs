@@ -1,8 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace Hotelli
 {
-    public partial class HotelMainFM : Form
+    public partial class HotelMainView : Form
     {
-        public HotelMainFM()
+        public HotelMainView()
         {
             InitializeComponent();
         }
@@ -15,7 +25,8 @@ namespace Hotelli
 
         private void hallitseVarauksiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            HotelReservationFM reservationFM = new HotelReservationFM();
+            reservationFM.Show();
         }
 
         private void hallitseHuoneitaToolStripMenuItem_Click(object sender, EventArgs e)
