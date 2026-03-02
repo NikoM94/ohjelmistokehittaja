@@ -16,5 +16,25 @@ namespace Hotelli
         {
             InitializeComponent();
         }
+
+        private void ReservationAddBT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReservationUpdateBT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReservationDeleteBT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReservationEmptyFieldsBT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

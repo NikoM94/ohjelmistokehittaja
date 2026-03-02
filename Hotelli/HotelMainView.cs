@@ -31,7 +31,8 @@ namespace Hotelli
 
         private void hallitseHuoneitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            HotelRoomFM roomFM = new HotelRoomFM();
+            roomFM.Show();
         }
     }
 }

@@ -56,7 +56,7 @@ namespace Hotelli
             if (GetCredentials(userName, password).Rows.Count > 0)
             {
                 this.Hide();
-                HotelMainFM mainFM= new HotelMainFM();
+                HotelMainView mainFM= new HotelMainView();
                 mainFM.Show();
             }
             else

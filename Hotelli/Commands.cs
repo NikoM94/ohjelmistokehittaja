@@ -25,5 +25,21 @@ namespace Hotelli
                                                          username = @user, 
                                                          `password` = @pass 
                                                      WHERE customerid = @id";
+
+        public static string AddRoomCommand = "TODO";
+
+        public static string GetRoomsCommand = "TODO";
+
+        public static string DeleteRoomCommand = "TODO";
+
+        public static string UpdateRoomCommand = "TODO";
+
+        public static string AddReservationCommand = "TODO";
+
+        public static string GetReservationsCommand = "TODO";
+
+        public static string DeleteReservationCommand = "TODO";
+
+        public static string UpdateReservationCommand = "TODO";
     }
 }
