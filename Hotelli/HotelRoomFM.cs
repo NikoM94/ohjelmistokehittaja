@@ -28,6 +28,7 @@ namespace Hotelli
 {
     public partial class HotelRoomFM : Form
     {
+        DataTable rooms = new DataTable();
         public HotelRoomFM()
         {
             InitializeComponent();
@@ -35,22 +36,172 @@ namespace Hotelli
 
         private void RoomAddBT_Click(object sender, EventArgs e)
         {
+            RoomInfo newRoom = new RoomInfo
+            {
+                Number = RoomRoomNumberTB.Text,
+                RoomType = ConvertToRoomType(RoomRoomTypeCB.Text),
+                Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
+                Phone = RoomPhoneTB.Text,
+            };
 
+            if (rooms.Columns.Contains(RoomRoomNumberTB.Text))
+            {
+                MessageBox.Show("Room number already exists", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool result = Room.AddRoom(newRoom);
+
+            if (!result)
+            {
+                MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            rooms = Room.GetRooms();
+            RoomDG.DataSource = rooms;
+        }
+
+        private static bool WhichRBChecked(bool checked1, bool checked2)
+        {
+            if (checked1)
+            {
+                return true;
+            }
+            if (checked2)
+            {
+                return false;
+            }
+            return false;
+        }
+
+        private static RoomType ConvertToRoomType(string typeString)
+        {
+            return typeString switch
+            {
+                "Single" => RoomType.Single,
+                "Double" => RoomType.Double,
+                "Family" => RoomType.Family,
+                "Suite" => RoomType.Suite,
+                _ => RoomType.Single,
+            };
         }
 
         private void RoomUpdateBT_Click(object sender, EventArgs e)
         {
+            if (RoomDG.CurrentRow == null)
+            {
+                return;
+            }
 
+            string? id = RoomDG.CurrentRow.Cells["id"].Value.ToString();
+
+            if (id == null)
+            {
+                MessageBox.Show("ID was null", "NULL value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            RoomInfo roomToUpdate = new RoomInfo
+            {
+                Number = RoomRoomNumberTB.Text,
+                RoomType = ConvertToRoomType(RoomRoomTypeCB.Text),
+                Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
+                Phone = RoomPhoneTB.Text,
+            };
+
+            if (rooms.Columns.Contains(RoomRoomNumberTB.Text))
+            {
+                MessageBox.Show("Room number already exists", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool result = Room.UpdateRoom(roomToUpdate, id);
+
+            if (!result)
+            {
+                MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            rooms = Room.GetRooms();
+            RoomDG.DataSource = rooms;
         }
 
         private void RoomDeleteBT_Click(object sender, EventArgs e)
         {
+            if (RoomDG.CurrentRow == null)
+            {
+                return;
+            }
 
+            string? id = RoomDG.CurrentRow.Cells["id"].Value.ToString();
+
+            if (id == null)
+            {
+                MessageBox.Show("ID was null", "NULL value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool result = Room.DeleteRoom(id);
+
+            if (!result)
+            {
+                MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            rooms = Room.GetRooms();
+            RoomDG.DataSource = rooms;
         }
 
         private void RoomEmptyFieldsBT_Click(object sender, EventArgs e)
         {
+            RoomRoomNumberTB.Text = "";
+            RoomPhoneTB.Text = "";
+            RoomFreeNoRB.Checked = false;
+            RoomFreeYesRB.Checked = false;
+        }
 
+        private void HotelRoomFM_Load(object sender, EventArgs e)
+        {
+            RoomDG.DataSource = Room.GetRooms();
+            FillRoomTypeCBFields();
+            RoomFreeYesRB.Checked = true;
+        }
+
+        private void FillRoomTypeCBFields()
+        {
+            RoomRoomTypeCB.Items.Add(RoomType.Single);
+            RoomRoomTypeCB.Items.Add(RoomType.Double);
+            RoomRoomTypeCB.Items.Add(RoomType.Family);
+            RoomRoomTypeCB.Items.Add(RoomType.Suite);
+        }
+
+        private void RoomFreeYesRB_CheckedChanged(object sender, EventArgs e)
+        {
+            RoomFreeNoRB.Checked = !RoomFreeYesRB.Checked;
+        }
+
+        private void RoomFreeNoRB_CheckedChanged(object sender, EventArgs e)
+        {
+            RoomFreeYesRB.Checked = !RoomFreeNoRB.Checked;
+        }
+
+        private void RoomDG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var roomValues = RoomDG.Rows[e.RowIndex].Cells;
+            RoomRoomNumberTB.Text = roomValues["roomnumber"].Value.ToString();
+            RoomRoomTypeCB.Text = roomValues["roomtype"].Value.ToString();
+            bool free = roomValues["isfree"].Value.ToString() == "Kyllä";
+            if (free)
+            {
+                RoomFreeYesRB.Checked = true;
+                RoomFreeNoRB.Checked = false;
+            }
+            else
+            {
+                RoomFreeYesRB.Checked = false;
+                RoomFreeNoRB.Checked = true;
+            }
+            RoomPhoneTB.Text = roomValues["phone"].Value.ToString();
         }
     }
 }

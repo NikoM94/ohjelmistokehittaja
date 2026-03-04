@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ReservationDG = new System.Windows.Forms.DataGridView();
+            this.RoomDG = new System.Windows.Forms.DataGridView();
             this.ReservationManagementLB = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RoomEmptyFieldsBT = new System.Windows.Forms.Button();
@@ -45,19 +45,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.RoomFreeNoRB = new System.Windows.Forms.RadioButton();
             this.RoomFreeYesRB = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.ReservationDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RoomDG)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ReservationDG
+            // RoomDG
             // 
-            this.ReservationDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ReservationDG.Location = new System.Drawing.Point(307, 107);
-            this.ReservationDG.Name = "ReservationDG";
-            this.ReservationDG.RowTemplate.Height = 25;
-            this.ReservationDG.Size = new System.Drawing.Size(530, 351);
-            this.ReservationDG.TabIndex = 48;
+            this.RoomDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RoomDG.Location = new System.Drawing.Point(307, 107);
+            this.RoomDG.Name = "RoomDG";
+            this.RoomDG.RowTemplate.Height = 25;
+            this.RoomDG.Size = new System.Drawing.Size(530, 351);
+            this.RoomDG.TabIndex = 48;
+            this.RoomDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomDG_CellClick);
             // 
             // ReservationManagementLB
             // 
@@ -205,6 +206,7 @@
             this.RoomFreeNoRB.TabStop = true;
             this.RoomFreeNoRB.Text = "EI";
             this.RoomFreeNoRB.UseVisualStyleBackColor = true;
+            this.RoomFreeNoRB.CheckedChanged += new System.EventHandler(this.RoomFreeNoRB_CheckedChanged);
             // 
             // RoomFreeYesRB
             // 
@@ -218,6 +220,7 @@
             this.RoomFreeYesRB.TabStop = true;
             this.RoomFreeYesRB.Text = "KYLLÄ";
             this.RoomFreeYesRB.UseVisualStyleBackColor = true;
+            this.RoomFreeYesRB.CheckedChanged += new System.EventHandler(this.RoomFreeYesRB_CheckedChanged);
             // 
             // HotelRoomFM
             // 
@@ -236,11 +239,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ReservationDG);
+            this.Controls.Add(this.RoomDG);
             this.Controls.Add(this.panel1);
             this.Name = "HotelRoomFM";
             this.Text = "Huoneiden hallinta";
-            ((System.ComponentModel.ISupportInitialize)(this.ReservationDG)).EndInit();
+            this.Load += new System.EventHandler(this.HotelRoomFM_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.RoomDG)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -252,7 +256,7 @@
 
         #endregion
 
-        private DataGridView ReservationDG;
+        private DataGridView RoomDG;
         private Label ReservationManagementLB;
         private Panel panel1;
         private Button RoomEmptyFieldsBT;

@@ -8,15 +8,15 @@ namespace Hotelli
 {
     internal class Commands
     {
-        public static string GetCustomersCommand = "SELECT customerid, firstname, lastname, address, postcode, postalarea FROM customers";
+        public readonly static string GetCustomersCommand = "SELECT customerid, firstname, lastname, address, postcode, postalarea FROM customers";
 
-        public static string DeleteCustomerCommand = "DELETE FROM customers WHERE customerid = @id";
+        public readonly static string DeleteCustomerCommand = "DELETE FROM customers WHERE customerid = @id";
 
-        public static string AddCustomerCommand = "INSERT INTO customers " +
+        public readonly static string AddCustomerCommand = "INSERT INTO customers " +
                                                     "(firstname, lastname, address, postcode, postalarea, username, password) " +
                                                     "VALUES (@fn, @ln, @addr, @pscode, @psarea, @usn, @pw)";
 
-        public static string UpdateCustomerCommand = @"UPDATE customers 
+        public readonly static string UpdateCustomerCommand = @"UPDATE customers 
                                                      SET firstname = @fn, 
                                                          lastname = @ln, 
                                                          address = @addr, 
@@ -26,13 +26,20 @@ namespace Hotelli
                                                          `password` = @pass 
                                                      WHERE customerid = @id";
 
-        public static string AddRoomCommand = "TODO";
+        public readonly static string AddRoomCommand = "INSERT INTO rooms" +
+                                              "(roomnumber, roomtype, isfree, phone) " +
+                                              "VALUES (@num, @rt, @free, @phn)";
 
-        public static string GetRoomsCommand = "TODO";
+        public readonly static string GetRoomsCommand = "SELECT id, roomnumber, roomtype, CASE WHEN isfree = 1 THEN 'Kyllä' ELSE 'Ei' END AS isfree, phone FROM rooms";
 
-        public static string DeleteRoomCommand = "TODO";
+        public readonly static string DeleteRoomCommand = "DELETE FROM rooms WHERE id = @id";
 
-        public static string UpdateRoomCommand = "TODO";
+        public readonly static string UpdateRoomCommand = @"UPDATE rooms 
+                                                     SET roomnumber = @num, 
+                                                         roomtype = @rt, 
+                                                         isfree = @free, 
+                                                         phone = @phn, 
+                                                     WHERE roomid = @id";
 
         public static string AddReservationCommand = "TODO";
 
