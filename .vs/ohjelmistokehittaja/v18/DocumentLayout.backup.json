@@ -3,28 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\hotelloginfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\hotelloginfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelmainview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelmainview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\hotelmainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\hotelmainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelreservationfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelreservationfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\hotelreservationfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\hotelreservationfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelroomfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelroomfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\hotelroomfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\hotelroomfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelcustomerfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelcustomerfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\hotelcustomerfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\hotelcustomerfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelloginfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelloginfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelmainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelmainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelloginfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelloginfm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelcustomerfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelcustomerfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelroomfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelroomfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\forms\\hotelreservationfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\forms\\hotelreservationfm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\data\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\data\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\data\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\data\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\utilities\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\utilities\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|c:\\users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\hotelli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908C5DED-FAB1-4E7B-B8FF-7895C4D82FB0}|Hotelli\\Hotelli.csproj|solutionrelative:hotelli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +78,244 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Customer.cs",
-              "RelativeDocumentMoniker": "Hotelli\\Customer.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Customer.cs",
-              "RelativeToolTip": "Hotelli\\Customer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAABtAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Program.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Program.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Program.cs",
+              "RelativeToolTip": "Hotelli\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAABOwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T11:15:44.047Z",
+              "WhenOpened": "2026-03-04T16:52:17.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "InputValidator.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Utilities\\InputValidator.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Utilities\\InputValidator.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Utilities\\InputValidator.cs",
+              "RelativeToolTip": "Hotelli\\Utilities\\InputValidator.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAABUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:17.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Data\\Commands.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Data\\Commands.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Data\\Commands.cs",
+              "RelativeToolTip": "Hotelli\\Data\\Commands.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAABUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:09.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Data\\Connection.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Data\\Connection.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Data\\Connection.cs",
+              "RelativeToolTip": "Hotelli\\Data\\Connection.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAABUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:09.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HotelRoomFM.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelRoomFM.Designer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelRoomFM.Designer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelRoomFM.Designer.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelRoomFM.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:22.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HotelReservationFM.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelReservationFM.Designer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelReservationFM.Designer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelReservationFM.Designer.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelReservationFM.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:22.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HotelLoginFM.cs",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelLoginFM.cs",
-              "RelativeDocumentMoniker": "Hotelli\\HotelLoginFM.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelLoginFM.cs",
-              "RelativeToolTip": "Hotelli\\HotelLoginFM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:41:05.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HotelMainView.cs",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelMainView.cs",
-              "RelativeDocumentMoniker": "Hotelli\\HotelMainView.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelMainView.cs",
-              "RelativeToolTip": "Hotelli\\HotelMainView.cs",
+              "Title": "HotelMainView.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelMainView.Designer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelMainView.Designer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelMainView.Designer.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelMainView.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:41:05.544Z"
+              "WhenOpened": "2026-03-04T16:51:21.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Models\\Room.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Room.cs",
+              "RelativeToolTip": "Hotelli\\Models\\Room.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:02.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HotelCustomerFM.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelCustomerFM.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelCustomerFM.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelCustomerFM.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelCustomerFM.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:53.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HotelRoomFM.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelRoomFM.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelRoomFM.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelRoomFM.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelRoomFM.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:53.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "HotelReservationFM.cs",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelReservationFM.cs",
-              "RelativeDocumentMoniker": "Hotelli\\HotelReservationFM.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelReservationFM.cs",
-              "RelativeToolTip": "Hotelli\\HotelReservationFM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelReservationFM.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelReservationFM.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelReservationFM.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelReservationFM.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAABUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:41:05.575Z"
+              "WhenOpened": "2026-03-04T16:51:53.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Customer.cs",
+              "RelativeToolTip": "Hotelli\\Models\\Customer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:02.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Models\\Reservation.cs",
+              "RelativeToolTip": "Hotelli\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:52:02.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HotelRoomFM.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelRoomFM.cs",
-              "RelativeDocumentMoniker": "Hotelli\\HotelRoomFM.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelRoomFM.cs [Design]",
-              "RelativeToolTip": "Hotelli\\HotelRoomFM.cs [Design]",
+              "Title": "HotelCustomerFM.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelCustomerFM.Designer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelCustomerFM.Designer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelCustomerFM.Designer.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelCustomerFM.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:41:05.575Z"
+              "WhenOpened": "2026-03-04T16:51:21.969Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HotelCustomerFM.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelCustomerFM.cs",
-              "RelativeDocumentMoniker": "Hotelli\\HotelCustomerFM.cs",
-              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\HotelCustomerFM.cs [Design]",
-              "RelativeToolTip": "Hotelli\\HotelCustomerFM.cs [Design]",
+              "Title": "HotelLoginFM.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelLoginFM.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelLoginFM.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelLoginFM.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelLoginFM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:41:05.607Z"
+              "WhenOpened": "2026-03-04T16:51:21.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HotelMainView.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelMainView.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelMainView.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelMainView.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelMainView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:21.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HotelLoginFM.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelLoginFM.Designer.cs",
+              "RelativeDocumentMoniker": "Hotelli\\Forms\\HotelLoginFM.Designer.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\source\\repos\\ohjelmistokehittaja\\Hotelli\\Forms\\HotelLoginFM.Designer.cs",
+              "RelativeToolTip": "Hotelli\\Forms\\HotelLoginFM.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAABEwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:51:21.759Z",
+              "EditorCaption": ""
             }
           ]
         }
