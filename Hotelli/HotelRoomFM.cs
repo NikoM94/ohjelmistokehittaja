@@ -40,7 +40,7 @@ namespace Hotelli
             {
                 Number = RoomRoomNumberTB.Text,
                 RoomType = Room.ConvertToRoomType(RoomRoomTypeCB.Text),
-                Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
+                Free = RoomFreeNoRB.Checked ? false : true,
                 Phone = RoomPhoneTB.Text,
             };
 
@@ -57,21 +57,12 @@ namespace Hotelli
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+            {
+                MessageBox.Show("Room added succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             rooms = Room.GetRooms();
             RoomDG.DataSource = rooms;
-        }
-
-        private static bool WhichRBChecked(bool checked1, bool checked2)
-        {
-            if (checked1)
-            {
-                return true;
-            }
-            if (checked2)
-            {
-                return false;
-            }
-            return false;
         }
 
         private void RoomUpdateBT_Click(object sender, EventArgs e)
@@ -93,7 +84,7 @@ namespace Hotelli
             {
                 Number = RoomRoomNumberTB.Text,
                 RoomType = Room.ConvertToRoomType(RoomRoomTypeCB.Text),
-                Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
+                Free = RoomFreeNoRB.Checked ? false : true,
                 Phone = RoomPhoneTB.Text,
             };
 
@@ -109,6 +100,10 @@ namespace Hotelli
             {
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            else
+            {
+                MessageBox.Show("Room deleted succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             rooms = Room.GetRooms();
             RoomDG.DataSource = rooms;
@@ -135,6 +130,10 @@ namespace Hotelli
             {
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            else
+            {
+                MessageBox.Show("Room deleted succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             rooms = Room.GetRooms();
             RoomDG.DataSource = rooms;

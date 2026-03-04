@@ -74,6 +74,10 @@ namespace Hotelli
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+            {
+                MessageBox.Show("Customer added succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             customers = Customer.GetCustomers();
             CustomerDG.DataSource = customers;
         }
@@ -100,6 +104,10 @@ namespace Hotelli
             {
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            else
+            {
+                MessageBox.Show("Customer deleted succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             customers = Customer.GetCustomers();
             CustomerDG.DataSource = customers;
@@ -146,6 +154,10 @@ namespace Hotelli
             {
                 MessageBox.Show("Failed to execute SQL query", "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+            else
+            {
+                MessageBox.Show("Customer updated succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             customers = Customer.GetCustomers();
             CustomerDG.DataSource = customers;
