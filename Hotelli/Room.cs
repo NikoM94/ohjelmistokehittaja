@@ -15,24 +15,33 @@ namespace Hotelli
             Connection connection = new Connection();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand(Commands.GetCustomersCommand, connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.GetRoomsCommand, connection.GetConnection());
             connection.OpenConnection();
             adapter.SelectCommand = command;
             adapter.Fill(table);
+            connection.CloseConnection();
             return table;
         }
+        public static RoomType ConvertToRoomType(string typeString)
+        {
+            return typeString switch
+            {
+                "Single" => RoomType.Single,
+                "Double" => RoomType.Double,
+                "Family" => RoomType.Family,
+                "Suite" => RoomType.Suite,
+                _ => RoomType.Single,
+            };
+        }
 
-        public static bool AddRoom(CustomerInfo customer)
+        public static bool AddRoom(RoomInfo room)
         {
             Connection connection = new Connection();
-            MySqlCommand command = new MySqlCommand(Commands.AddCustomerCommand, connection.GetConnection());
-            command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = customer.FirstName;
-            command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = customer.LastName;
-            command.Parameters.Add("@addr", MySqlDbType.VarChar).Value = customer.Address;
-            command.Parameters.Add("@pscode", MySqlDbType.VarChar).Value = customer.Postcode;
-            command.Parameters.Add("@psarea", MySqlDbType.VarChar).Value = customer.City;
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = customer.Username;
-            command.Parameters.Add("@pw", MySqlDbType.VarChar).Value = customer.Password;
+            MySqlCommand command = new MySqlCommand(Commands.AddRoomCommand, connection.GetConnection());
+            command.Parameters.Add("@num", MySqlDbType.VarChar).Value = room.Number;
+            command.Parameters.Add("@rt", MySqlDbType.VarChar).Value = room.RoomType;
+            command.Parameters.Add("@free", MySqlDbType.Bit).Value = room.Free;
+            command.Parameters.Add("@phn", MySqlDbType.VarChar).Value = room.Phone;
 
             connection.OpenConnection();
 
@@ -51,7 +60,7 @@ namespace Hotelli
         public static bool DeleteRoom(string id)
         {
             Connection connection = new Connection();
-            MySqlCommand command = new MySqlCommand(Commands.DeleteCustomerCommand, connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.DeleteRoomCommand, connection.GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
 
@@ -68,19 +77,16 @@ namespace Hotelli
             }
         }
 
-        public static bool UpdateRoom(CustomerInfo customer, string id)
+        public static bool UpdateRoom(RoomInfo room, string id)
         {
             Connection connection = new Connection();
-            MySqlCommand command = new MySqlCommand(Commands.UpdateCustomerCommand, connection.GetConnection());
+            MySqlCommand command = new MySqlCommand(Commands.UpdateRoomCommand, connection.GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
-            command.Parameters.AddWithValue("@fn", customer.FirstName);
-            command.Parameters.AddWithValue("@ln", customer.LastName);
-            command.Parameters.AddWithValue("@addr", customer.Address);
-            command.Parameters.AddWithValue("@pc", customer.Postcode);
-            command.Parameters.AddWithValue("@pa", customer.City);
-            command.Parameters.AddWithValue("@user", customer.Username);
-            command.Parameters.AddWithValue("@pass", customer.Password);
+            command.Parameters.Add("@num", MySqlDbType.VarChar).Value = room.Number;
+            command.Parameters.Add("@rt", MySqlDbType.VarChar).Value = room.RoomType;
+            command.Parameters.Add("@free", MySqlDbType.Bit).Value = room.Free;
+            command.Parameters.Add("@phn", MySqlDbType.VarChar).Value = room.Phone;
 
             connection.OpenConnection();
             if (command.ExecuteNonQuery() == 1)
