@@ -209,6 +209,7 @@
             this.ReservationDG.RowTemplate.Height = 25;
             this.ReservationDG.Size = new System.Drawing.Size(530, 351);
             this.ReservationDG.TabIndex = 46;
+            this.ReservationDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationDG_CellClick);
             // 
             // ReservationManagementLB
             // 
@@ -255,6 +256,7 @@
             this.Controls.Add(this.label1);
             this.Name = "HotelReservationFM";
             this.Text = "Varausten hallinta";
+            this.Load += new System.EventHandler(this.HotelReservationFM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReservationDG)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

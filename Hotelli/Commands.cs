@@ -17,14 +17,14 @@ namespace Hotelli
                                                     "VALUES (@fn, @ln, @addr, @pscode, @psarea, @usn, @pw)";
 
         public readonly static string UpdateCustomerCommand = @"UPDATE customers 
-                                                     SET firstname = @fn, 
-                                                         lastname = @ln, 
-                                                         address = @addr, 
-                                                         postcode = @pc, 
-                                                         postalarea = @pa, 
-                                                         username = @user, 
-                                                         `password` = @pass 
-                                                     WHERE customerid = @id";
+                                                                 SET firstname = @fn, 
+                                                                     lastname = @ln, 
+                                                                     address = @addr, 
+                                                                     postcode = @pc, 
+                                                                     postalarea = @pa, 
+                                                                     username = @user, 
+                                                                     `password` = @pass 
+                                                                 WHERE customerid = @id";
 
         public readonly static string AddRoomCommand = "INSERT INTO rooms" +
                                               "(roomnumber, roomtype, isfree, phone) " +
@@ -35,18 +35,28 @@ namespace Hotelli
         public readonly static string DeleteRoomCommand = "DELETE FROM rooms WHERE id = @id";
 
         public readonly static string UpdateRoomCommand = @"UPDATE rooms 
-                                                     SET roomnumber = @num, 
-                                                         roomtype = @rt, 
-                                                         isfree = @free, 
-                                                         phone = @phn, 
-                                                     WHERE roomid = @id";
+                                                             SET roomnumber = @num, 
+                                                                 roomtype = @rt, 
+                                                                 isfree = @free, 
+                                                                 phone = @phn 
+                                                             WHERE id = @id";
 
-        public static string AddReservationCommand = "TODO";
+        public readonly static string AddReservationCommand = "INSERT INTO reservations " +
+                                                     "(reservationnumber, customernumber, roomtype, roomnumber, indate, outdate) " + 
+                                                     "VALUES (@resnum, @cnum, @rt, @rnum, @ind, @outd)";
 
-        public static string GetReservationsCommand = "TODO";
+        public readonly static string GetReservationsCommand = "SELECT * FROM reservations";
 
-        public static string DeleteReservationCommand = "TODO";
+        public readonly static string DeleteReservationCommand = "DELETE FROM reservations WHERE id = @id";
 
-        public static string UpdateReservationCommand = "TODO";
+        public readonly static string UpdateReservationCommand = @"UPDATE reservations 
+                                                             SET reservationnumber = @resnum, 
+                                                                 customernumber = @cnum, 
+                                                                 roomtype = @rt, 
+                                                                 roomnumber = @rnum, 
+                                                                 indate = @ind, 
+                                                                 outdate = @outd 
+                                                             WHERE id = @id";
+
     }
 }

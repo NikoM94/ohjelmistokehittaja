@@ -39,7 +39,7 @@ namespace Hotelli
             RoomInfo newRoom = new RoomInfo
             {
                 Number = RoomRoomNumberTB.Text,
-                RoomType = ConvertToRoomType(RoomRoomTypeCB.Text),
+                RoomType = Room.ConvertToRoomType(RoomRoomTypeCB.Text),
                 Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
                 Phone = RoomPhoneTB.Text,
             };
@@ -74,18 +74,6 @@ namespace Hotelli
             return false;
         }
 
-        private static RoomType ConvertToRoomType(string typeString)
-        {
-            return typeString switch
-            {
-                "Single" => RoomType.Single,
-                "Double" => RoomType.Double,
-                "Family" => RoomType.Family,
-                "Suite" => RoomType.Suite,
-                _ => RoomType.Single,
-            };
-        }
-
         private void RoomUpdateBT_Click(object sender, EventArgs e)
         {
             if (RoomDG.CurrentRow == null)
@@ -104,7 +92,7 @@ namespace Hotelli
             RoomInfo roomToUpdate = new RoomInfo
             {
                 Number = RoomRoomNumberTB.Text,
-                RoomType = ConvertToRoomType(RoomRoomTypeCB.Text),
+                RoomType = Room.ConvertToRoomType(RoomRoomTypeCB.Text),
                 Free = WhichRBChecked(RoomFreeNoRB.Checked, RoomFreeYesRB.Checked),
                 Phone = RoomPhoneTB.Text,
             };

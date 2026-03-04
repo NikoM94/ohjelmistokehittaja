@@ -19,6 +19,7 @@ namespace Hotelli
             connection.OpenConnection();
             adapter.SelectCommand = command;
             adapter.Fill(table);
+            connection.CloseConnection();
             return table;
         }
 

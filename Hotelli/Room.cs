@@ -19,7 +19,19 @@ namespace Hotelli
             connection.OpenConnection();
             adapter.SelectCommand = command;
             adapter.Fill(table);
+            connection.CloseConnection();
             return table;
+        }
+        public static RoomType ConvertToRoomType(string typeString)
+        {
+            return typeString switch
+            {
+                "Single" => RoomType.Single,
+                "Double" => RoomType.Double,
+                "Family" => RoomType.Family,
+                "Suite" => RoomType.Suite,
+                _ => RoomType.Single,
+            };
         }
 
         public static bool AddRoom(RoomInfo room)
