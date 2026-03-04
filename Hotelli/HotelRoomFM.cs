@@ -103,7 +103,7 @@ namespace Hotelli
             }
             else
             {
-                MessageBox.Show("Room deleted succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Room updated succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             rooms = Room.GetRooms();
             RoomDG.DataSource = rooms;
