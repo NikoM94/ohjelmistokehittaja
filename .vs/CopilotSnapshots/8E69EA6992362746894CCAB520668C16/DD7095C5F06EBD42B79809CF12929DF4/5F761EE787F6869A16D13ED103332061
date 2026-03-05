@@ -1,6 +1,4 @@
-using Hotelli.Forms;
-
-namespace Hotelli
+﻿namespace Hotelli
 {
     internal static class Program
     {

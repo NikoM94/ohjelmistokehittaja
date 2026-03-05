@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="HotelMainView.cs">
+    <Compile Update="Forms\HotelCustomerFM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HotelCustomerFM.cs">
+    <Compile Update="Forms\HotelLoginFM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HotelLoginFM.cs">
+    <Compile Update="Forms\HotelMainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HotelReservationFM.cs">
+    <Compile Update="Forms\HotelReservationFM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HotelRoomFM.cs">
+    <Compile Update="Forms\HotelRoomFM.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
