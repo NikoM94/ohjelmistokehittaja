@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using Hotelli.Data;
+using BCrypt.Net;
 
 namespace Hotelli.Forms
 {
@@ -24,18 +25,31 @@ namespace Hotelli.Forms
         {
             Connection connection = new Connection();
             DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
             String query = "SELECT * FROM `users` WHERE `username`=@usn AND `password`=@pass";
+
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
 
             command.CommandText = query;
             command.Connection = connection.GetConnection();
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = userName;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passwordHash;
 
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+            table.Columns.Add("username", typeof(string));
+            using (var reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    string username = reader.GetString("username");
+                    string hash = reader.GetString("password");
+
+                    if (BCrypt.Net.BCrypt.Verify(hash, passwordHash))
+                    {
+                        table.Rows.Add(username);
+                    }
+                }
+            }
             return table;
         }
 
