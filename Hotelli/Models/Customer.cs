@@ -34,7 +34,9 @@ namespace Hotelli.Models
             command.Parameters.Add("@pscode", MySqlDbType.VarChar).Value = customer.Postcode;
             command.Parameters.Add("@psarea", MySqlDbType.VarChar).Value = customer.City;
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = customer.Username;
-            command.Parameters.Add("@pw", MySqlDbType.VarChar).Value = customer.Password;
+
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(customer.Password);
+            command.Parameters.Add("@pw", MySqlDbType.VarChar).Value = passwordHash;
 
             connection.OpenConnection();
 

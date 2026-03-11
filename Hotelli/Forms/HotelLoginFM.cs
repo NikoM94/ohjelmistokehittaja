@@ -26,25 +26,23 @@ namespace Hotelli.Forms
             Connection connection = new Connection();
             DataTable table = new DataTable();
             MySqlCommand command = new MySqlCommand();
-            String query = "SELECT * FROM `users` WHERE `username`=@usn AND `password`=@pass";
-
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+            string query = "SELECT * FROM `users` WHERE `username`=@usn AND `password`=@pass";
 
             command.CommandText = query;
             command.Connection = connection.GetConnection();
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = userName;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passwordHash;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
 
+            connection.OpenConnection();
             table.Columns.Add("username", typeof(string));
-            using (var reader = command.ExecuteReader())
-            {
-                if (reader.Read())
-                {
+            using (var reader = command.ExecuteReader()) 
+            { 
+                if (reader.Read()) {
                     string username = reader.GetString("username");
                     string hash = reader.GetString("password");
 
-                    if (BCrypt.Net.BCrypt.Verify(hash, passwordHash))
+                    if (BCrypt.Net.BCrypt.Verify(password, hash))
                     {
                         table.Rows.Add(username);
                     }
@@ -68,15 +66,81 @@ namespace Hotelli.Forms
                 return;
             }
 
-            if (GetCredentials(userName, password).Rows.Count > 0)
+            string storedHash = GetPasswordHash(userName);
+
+            if (storedHash != null && BCrypt.Net.BCrypt.Verify(password, storedHash))
             {
                 this.Hide();
-                HotelMainView mainFM= new HotelMainView();
+                HotelMainView mainFM = new HotelMainView();
                 mainFM.Show();
+            }
+            else if (userName == "admin" && storedHash == null)
+            {
+                if (CreateAdminAccount())
+                {
+                    MessageBox.Show("Admin account created. Please log in again.", "Success");
+                }
             }
             else
             {
-                MessageBox.Show("Incorrect username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string GetPasswordHash(string username)
+        {
+            Connection connection = new Connection();
+            string query = "SELECT password FROM users WHERE username = @usrn";
+            MySqlCommand command = new MySqlCommand(query, connection.GetConnection());
+            command.Parameters.AddWithValue("@usrn", username);
+
+            connection.OpenConnection();
+            object result = command.ExecuteScalar();
+            connection.CloseConnection();
+
+            return result?.ToString(); 
+        }
+
+        public bool DoesUserExist(string username)
+        {
+            string query = "SELECT COUNT(*) FROM users WHERE username = @user";
+            Connection connection = new Connection();
+            MySqlCommand command = new MySqlCommand(query, connection.GetConnection());
+
+            command.Parameters.AddWithValue("@user", username);
+
+            connection.OpenConnection();
+            long count = (long)command.ExecuteScalar();
+            connection.CloseConnection();
+
+            return count > 0;
+        }
+
+        private bool CreateAdminAccount()
+        {
+            Connection connection = new Connection();
+            MySqlCommand command = new MySqlCommand();
+            String query = "INSERT INTO users (username, password) VALUES (@usrn, @pwhash)";
+
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword("admin");
+
+            command.CommandText = query;
+            command.Connection = connection.GetConnection();
+
+            command.Parameters.Add("@usrn", MySqlDbType.VarChar).Value = "admin";
+            command.Parameters.Add("@pwhash", MySqlDbType.VarChar).Value = passwordHash;
+
+            connection.OpenConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connection.CloseConnection();
+                return true;
+            }
+            else
+            {
+                connection.CloseConnection();
+                return false;
             }
         }
 
